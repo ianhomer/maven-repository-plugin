@@ -46,7 +46,7 @@ public class ProjectRepositoryAction extends RepositoryAction {
 
         url = new URL(url, "plugin/repository/project/");
 
-        url = new URL(url, projectName + "/Build/" + buildNumber + "/" + (urlSuffix!=null?urlSuffix:"") );
+        url = new URL(url, projectName.replace(" ","%20") + "/Build/" + buildNumber + "/" + (urlSuffix!=null?urlSuffix:"") );
 
         return url;
 
